@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shared Bookmarks</title>
+</head>
+<body>
+
+<h1>Shared Bookmarks</h1>
+
+<label for="user-select">Choose user:</label>
+<select id="user-select"></select>
+
+<hr>
+
+<ul id="bookmark-list"></ul>
+
+<hr>
+
+<h2>Add Bookmark</h2>
+
+<form id="bookmark-form">
+  <label>
+    URL
+    <input id="url" required type="url" />
+  </label>
+
+  <label>
+    Title
+    <input id="title" required />
+  </label>
+
+  <label>
+    Description
+    <textarea id="description" required></textarea>
+  </label>
+
+  <button type="submit">Save</button>
+</form>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
