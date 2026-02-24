@@ -1,0 +1,131 @@
+/* ---------- Base ---------- */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f7f9fc;
+  color: #1f2933;
+  line-height: 1.5;
+}
+
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+select,
+input,
+textarea,
+button {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #d2d6dc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* ---------- Buttons ---------- */
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-right: 6px;
+  margin-top: 5px;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
+
+/* ---------- Bookmark List ---------- */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: white;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+li a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #2563eb;
+  display: block;
+  margin-bottom: 5px;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+small {
+  display: block;
+  margin: 6px 0;
+  color: #6b7280;
+}
+
+/* ---------- Divider ---------- */
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 25px 0;
+}
+
+/* ---------- Desktop ---------- */
+
+@media (min-width: 768px) {
+  body {
+    max-width: 700px;
+    margin: 40px auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  li {
+    padding: 20px;
+  }
+}
