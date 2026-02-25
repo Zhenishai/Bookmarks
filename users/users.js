@@ -1,4 +1,4 @@
-import { getUserIds } from "./storage.js";
+import { getUserIds } from "../storage.js";
 
 let currentUser = null;
 
