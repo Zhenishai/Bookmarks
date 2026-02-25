@@ -2,7 +2,7 @@
 
 A multi-user bookmark management application built with **HTML**, **JavaScript**, and **localStorage**.
 
-This project is part of the **Piscine learning sprint** and focuses on application logic, data handling, and clean frontend structure rather than visual design.
+This project is part of the **Piscine learning sprint** and focuses on application logic, data handling, and a clean frontend structure rather than visual design.
 
 ---
 
@@ -20,11 +20,10 @@ As developers, we often want to save useful links and return to them later.
 This application allows users to create, view, and interact with bookmarks in a shared environment.
 
 The main goals of the project are to:
-
-- implement clear and simple application logic  
-- manage user-specific state  
-- persist data in the browser  
-- build an accessible frontend  
+- implement clear and simple application logic,
+- manage user-specific state,
+- persist data in the browser,
+- build an accessible frontend.
 
 ---
 
@@ -47,7 +46,7 @@ The main goals of the project are to:
 - Reverse chronological sorting  
 - Like button with persistent counter  
 - Copy-to-clipboard functionality  
-- User-specific data stored in `localStorage`  
+- User-specific data stored in localStorage  
 - Keyboard-accessible and semantic HTML  
 
 ---
@@ -84,24 +83,3 @@ Because the project uses ES Modules, it must be served over HTTP:
 
 ```bash
 npx http-server
-
-## 🎯 Focus Areas
-
-This section highlights the key areas that this project focuses on during development.
-
-### 🧪 Testing
-The project includes unit tests for non-trivial business logic to demonstrate understanding of testing fundamentals.
-
-### ♿ Accessibility
-Accessibility is treated as a core requirement.  
-The project focuses on keyboard navigation, semantic HTML, and clear communication of empty states, with the goal of achieving 100% accessibility in Lighthouse Snapshot mode.
-
-### 🧠 Learning Outcomes
-Through this project, I am practicing:
-- structuring applications from data and logic first  
-- managing state per user  
-- persisting data using `localStorage`  
-- DOM manipulation and event-driven programming  
-- writing unit tests for core logic  
-- applying basic accessibility best practices  
-- planning work using user stories and issues  
