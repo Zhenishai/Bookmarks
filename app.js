@@ -1,4 +1,4 @@
-import { initUsers, getCurrentUser } from "./users.js";
+import { initUsers, getCurrentUser } from "./users/users.js";
 import { renderBookmarks } from "./bookmarksView.js";
 import { initForm } from "./bookmarksForm.js";
 
