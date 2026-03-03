@@ -1,24 +1,19 @@
 import { getUserIds } from "../storage.js";
 
-let currentUser = null;
-
-export function getCurrentUser() {
-  return currentUser;
+export function initUser() {
+  return getUserIds().length !== 0 ? getUserIds()[0] : null;
 }
 
 export function initUsers(selectElement, onUserChange) {
-  const users = getUserIds();
+  let currentUser = getUserIds()[0];
 
-  users.forEach(id => {
+  getUserIds().forEach(id => {
     const option = document.createElement("option");
     option.value = id;
     option.textContent = `User ${id}`;
     selectElement.appendChild(option);
   });
-
-  currentUser = users[0];
   selectElement.value = currentUser;
-
   onUserChange(currentUser);
 
   selectElement.addEventListener("change", () => {
@@ -26,3 +21,4 @@ export function initUsers(selectElement, onUserChange) {
     onUserChange(currentUser);
   });
 }
+

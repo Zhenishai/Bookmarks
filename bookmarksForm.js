@@ -4,7 +4,7 @@ import { renderBookmarks } from "./bookmarksView.js";
 export function initForm(formElement, userIdGetter, listElement) {
   formElement.addEventListener("submit", e => {
     e.preventDefault();
-
+    
     const userId = userIdGetter();
 
     const url = document.getElementById("url").value.trim();

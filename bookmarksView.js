@@ -1,20 +1,23 @@
-import { getData, setData } from "./storage.js";
+import { getData } from "./storage.js";
+import {
+  createCopyBtn,
+  createLikeBtn,
+  createDeleteBtn
+} from "./bookmarkButtons.js";
 
 export function renderBookmarks(listElement, userId) {
   listElement.innerHTML = "";
-
   const bookmarks = getData(userId) || [];
 
   if (bookmarks.length === 0) {
     listElement.textContent = "No bookmarks saved yet.";
     return;
   }
-
-  const sorted = [...bookmarks].sort((a, b) => b.createdAt - a.createdAt);
-
+  const sorted = [...bookmarks].sort(
+    (a, b) => b.createdAt - a.createdAt
+  );
   sorted.forEach(bookmark => {
     const li = document.createElement("li");
-
     const link = document.createElement("a");
     link.href = bookmark.url;
     link.textContent = bookmark.title;
@@ -24,27 +27,33 @@ export function renderBookmarks(listElement, userId) {
     desc.textContent = bookmark.description;
 
     const time = document.createElement("small");
-    time.textContent = new Date(bookmark.createdAt).toLocaleString();
+    time.textContent = new Date(
+      bookmark.createdAt
+    ).toLocaleString();
 
-    const likeBtn = document.createElement("button");
-    likeBtn.textContent = `❤️ ${bookmark.likes}`;
+    const copyBtn = createCopyBtn(bookmark);
+    const likeBtn = createLikeBtn(
+      bookmark,
+      bookmarks,
+      userId,
+      listElement
+    );
+    const deleteBtn = createDeleteBtn(
+      bookmark.id,
+      bookmarks,
+      userId,
+      listElement
+    );
 
-    likeBtn.addEventListener("click", () => {
-      bookmark.likes++;
-      setData(userId, bookmarks);
-      renderBookmarks(listElement, userId);
-    });
+    li.append(
+      link,
+      desc,
+      time,
+      likeBtn,
+      copyBtn,
+      deleteBtn
+    );
 
-    const copyBtn = document.createElement("button");
-    copyBtn.textContent = "Copy URL";
-
-    copyBtn.addEventListener("click", async () => {
-      await navigator.clipboard.writeText(bookmark.url);
-      copyBtn.textContent = "Copied!";
-      setTimeout(() => (copyBtn.textContent = "Copy URL"), 1000);
-    });
-
-    li.append(link, desc, time, likeBtn, copyBtn);
     listElement.appendChild(li);
   });
 }
