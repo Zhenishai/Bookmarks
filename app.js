@@ -1,6 +1,6 @@
 import { initUsers} from "./users/users.js";
 import { renderBookmarks } from "./bookmarksView.js";
-import { initForm } from "./bookmarksForm.js";
+import { initForm } from "./bookmarksForm/bookmarksForm.js";
 
 const userSelect = document.getElementById("user-select");
 const list = document.getElementById("bookmark-list");
