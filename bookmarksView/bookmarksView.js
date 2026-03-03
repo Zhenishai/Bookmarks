@@ -3,7 +3,7 @@ import {
   createCopyBtn,
   createLikeBtn,
   createDeleteBtn
-} from "../bookmarkButtons.js";
+} from "../bookmarkButtons/bookmarkButtons.js";
 
 export function renderBookmarks(listElement, userId) {
   listElement.innerHTML = "";

@@ -6,7 +6,7 @@ jest.unstable_mockModule("../storage.js", () => ({
   getData: jest.fn(),
 }));
 
-jest.unstable_mockModule("../bookmarkButtons.js", () => ({
+jest.unstable_mockModule("../bookmarkButtons/bookmarkButtons", () => ({
   createCopyBtn: jest.fn(() => document.createElement("button")),
   createLikeBtn: jest.fn(() => document.createElement("button")),
   createDeleteBtn: jest.fn(() => document.createElement("button")),
@@ -20,7 +20,7 @@ const {
   createCopyBtn,
   createLikeBtn,
   createDeleteBtn,
-} = await import("../bookmarkButtons.js");
+} = await import("../bookmarkButtons/bookmarkButtons.js");
 
 describe("renderBookmarks", () => {
   let listElement;

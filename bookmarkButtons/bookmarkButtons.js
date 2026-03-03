@@ -1,5 +1,5 @@
-import { setData } from "./storage.js";
-import { renderBookmarks } from "./bookmarksView/bookmarksView.js";
+import { setData } from "../storage.js";
+import { renderBookmarks } from "../bookmarksView/bookmarksView.js";
 
 export function createCopyBtn(bookmark) {
   const copyBtn = document.createElement("button");
