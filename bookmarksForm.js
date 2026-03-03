@@ -1,6 +1,6 @@
 import { getData, setData } from "./storage.js";
 import { renderBookmarks } from "./bookmarksView.js";
-
+//Data shape
 export function initForm(formElement, userIdGetter, listElement) {
   formElement.addEventListener("submit", e => {
     e.preventDefault();
@@ -12,7 +12,6 @@ export function initForm(formElement, userIdGetter, listElement) {
     const description = document.getElementById("description").value.trim();
 
     const bookmarks = getData(userId) || [];
-
     const newBookmark = {
       id: Date.now().toString(),
       url,
