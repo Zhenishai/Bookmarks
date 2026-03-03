@@ -5,13 +5,13 @@ jest.unstable_mockModule("../storage.js", () => ({
   setData: jest.fn(),
 }));
 
-jest.unstable_mockModule("../bookmarksView.js", () => ({
+jest.unstable_mockModule("../bookmarksView/bookmarksView", () => ({
   renderBookmarks: jest.fn(),
 }));
 
 const { initForm } = await import("./bookmarksForm.js");
 const { getData, setData } = await import("../storage.js");
-const { renderBookmarks } = await import("../bookmarksView.js");
+const { renderBookmarks } = await import("../bookmarksView/bookmarksView.js");
 
 describe("initForm", () => {
   let form;

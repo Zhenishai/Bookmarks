@@ -1,9 +1,9 @@
-import { getData } from "./storage.js";
+import { getData } from "../storage.js";
 import {
   createCopyBtn,
   createLikeBtn,
   createDeleteBtn
-} from "./bookmarkButtons.js";
+} from "../bookmarkButtons.js";
 
 export function renderBookmarks(listElement, userId) {
   listElement.innerHTML = "";

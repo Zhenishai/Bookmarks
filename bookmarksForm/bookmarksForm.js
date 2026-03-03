@@ -1,5 +1,5 @@
 import { getData, setData } from "../storage.js";
-import { renderBookmarks } from "../bookmarksView.js";
+import { renderBookmarks } from "../bookmarksView/bookmarksView.js";
 //Data shape
 export function initForm(formElement, userIdGetter, listElement) {
   formElement.addEventListener("submit", e => {
