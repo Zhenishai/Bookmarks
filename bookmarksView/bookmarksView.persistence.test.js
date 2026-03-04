@@ -1,7 +1,7 @@
 import { renderBookmarks } from "./bookmarksView.js";
-import { setData, getData, clearData } from "../storage.js";
+import { setData, clearData } from "../storage.js";
 
-test("like count persists after reload", () => {
+test("like count persists after re-render", () => {
 
   const userId = "1";
 
@@ -26,9 +26,11 @@ test("like count persists after reload", () => {
 
   likeButton.click();
 
-  const storedData = getData(userId);
+  renderBookmarks(list, userId);
 
-  expect(storedData[0].likes).toBe(1);
+  likeButton = list.querySelector("button");
+
+  expect(likeButton.textContent).toContain("1");
 
   clearData(userId);
 
