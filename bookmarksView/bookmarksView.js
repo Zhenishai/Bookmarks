@@ -7,6 +7,7 @@ import {
 
 export function renderBookmarks(listElement, userId) {
   listElement.innerHTML = "";
+  
   const bookmarks = getData(userId) || [];
 
   if (bookmarks.length === 0) {
