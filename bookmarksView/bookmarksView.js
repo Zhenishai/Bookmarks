@@ -46,15 +46,16 @@ export function renderBookmarks(listElement, userId) {
       listElement
     );
 
-    li.append(
-      link,
-      desc,
-      time,
-      likeBtn,
-      copyBtn,
-      deleteBtn
-    );
+const btnContainer = document.createElement("div");
+btnContainer.className = "card-buttons";
+btnContainer.append(likeBtn, copyBtn, deleteBtn);
 
+li.append(
+  link,
+  desc,
+  time,
+  btnContainer
+);
     listElement.appendChild(li);
   });
 }
